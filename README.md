@@ -1,25 +1,41 @@
-# PasteVault
+<div align="center">
 
-Небольшой pastebin на чистом PHP и SQLite. Можно быстро поделиться кодом текстом по ссылке.
+# 🔐 PasteVault
 
-## Возможности
+**Мини-pastebin на чистом PHP + SQLite**
 
-- создание пасты с заголовком и выбором языка
-- ссылка на пасту + ссылка на «сырой» текст
-- паста может сама удалиться через час, день, неделю или месяц
-- ручное удаление пасты
-- очистка истёкших паст через cron
-- тёмная тема, работает на телефонах
+Быстро поделиться кодом или текстом по ссылке. Без фреймворков, одна зависимость — PHP.
 
-## Как запустить
+[![PHP](https://img.shields.io/badge/PHP-8.1%2B-777BB4?logo=php&logoColor=white)](https://php.net)
+[![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white)](https://sqlite.org)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-Нужен PHP 8.1+ (больше ничего ставить не надо).
+</div>
+
+---
+
+## Что умеет
+
+- 📝 создание пасты с заголовком и выбором языка
+- 🔗 ссылка на пасту + ссылка на «сырой» текст
+- ⏰ паста сама удалится через час, день, неделю или месяц
+- 🗑 ручное удаление пасты
+- 🧹 очистка истёкших паст по cron
+- 🎨 подсветка синтаксиса, тёмная тема, работает на телефонах
+
+## Быстрый старт
+
+Нужен только PHP 8.1+ (дополнительно ничего ставить не надо).
 
 ```bash
+git clone https://github.com/thesl33py/PasteVault.git
+cd PasteVault
 php -S localhost:8000 router.php
 ```
 
-Открыть http://localhost:8000
+Открыть → http://localhost:8000
+
+База (`database/pastevault.sqlite`) создастся сама при первом запуске.
 
 ## Как устроено
 
@@ -34,14 +50,6 @@ bin/cleanup.php      — удаление истёкших паст
 bin/seed.php         — добавляет пару паст-примеров
 ```
 
-База — один файл `database/pastevault.sqlite`, создаётся сам при первом запуске.
-
-## Очистка по расписанию
-
-```cron
-0 * * * * php /path/to/PasteVault/bin/cleanup.php
-```
-
 ## Маршруты
 
 | Что | Путь |
@@ -50,3 +58,13 @@ bin/seed.php         — добавляет пару паст-примеров
 | Показать пасту | `/paste/{id}` |
 | Сырой текст | `/raw/{id}` |
 | Удалить | `/paste/{id}/delete` |
+
+## Очистка по расписанию
+
+```cron
+0 * * * * php /path/to/PasteVault/bin/cleanup.php
+```
+
+## Лицензия
+
+MIT — см. [LICENSE](LICENSE)
