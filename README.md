@@ -68,3 +68,7 @@ bin/seed.php         — добавляет пару паст-примеров
 ## Лицензия
 
 MIT — см. [LICENSE](LICENSE)
+
+
+<img width="1058" height="541" alt="image" src="https://github.com/user-attachments/assets/c53d4c99-c520-4b9b-8857-5b9254107c9d" />
+
