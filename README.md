@@ -28,7 +28,7 @@
 Нужен только PHP 8.1+ (дополнительно ничего ставить не надо).
 
 ```bash
-git clone https://github.com/thesl33py/PasteVault.git
+git clone https://github.com/linux15404/PasteVault.git
 cd PasteVault
 php -S localhost:8000 router.php
 ```
